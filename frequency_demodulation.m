@@ -1,0 +1,17 @@
+clc;
+clear all;
+close all;
+B = 10;
+fs = 10000;
+fm = 35;
+fc = 500;
+t = (0:.1*fs)/fs;
+m = cos(2*pi*fm*t);
+c = cos(2*pi*fc*t);
+s = cos(2*pi*fc*t + B.*sin(2*pi*fm*t));
+subplot(5,1,1);
+plot(t,m);
+subplot(5,1,2);
+plot(t,c);
+subplot(5,1,3);
+plot(t,s);
